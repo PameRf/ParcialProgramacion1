@@ -1,0 +1,43 @@
+/*
+ * Censistas.h
+ *
+ *  Created on: 16 may. 2022
+ *      Author: pamel
+ */
+
+#ifndef CENSISTAS_H_
+#define CENSISTAS_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Inputs.h"
+
+typedef struct{
+	int dia;
+	int mes;
+	int anio;
+}FechaNacimiento;
+
+typedef struct{
+	char calle[50];
+	int numero;
+}Direccion;
+
+typedef struct{
+	int id;
+	char nombre[50];
+	char apellido[50];
+	int edad;
+	FechaNacimiento fecha;
+	Direccion domicilio;
+	int isEmpty;
+}Censistas;
+
+int inicializarCencista(Censistas* list, int len);
+int generarId();
+int buscarEspacioLibre(Censistas* list, int len);
+Censistas cargarUnCensista(int* retorno);
+
+
+#endif /* CENSISTAS_H_ */

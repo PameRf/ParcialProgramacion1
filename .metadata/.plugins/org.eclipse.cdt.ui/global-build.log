@@ -1,0 +1,264 @@
+16:09:35 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+17:18:13 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:28:17: warning: implicit declaration of function 'initPassengers' [-Wimplicit-function-declaration]
+   28 |  validarRetorno=initPassengers(censitas, LEN_CENSISTAS);
+      |                 ^~~~~~~~~~~~~~
+..\src\ParcialCenso.c:25:12: warning: unused variable 'unCesista' [-Wunused-variable]
+   25 |  Censistas unCesista;
+      |            ^~~~~~~~~
+..\src\ParcialCenso.c:22:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\ParcialCenso.o: in function `main':
+C:\Users\pamel\Desktop\Parcial_Programacion\parcial_1\ParcialCenso\Debug/../src/ParcialCenso.c:28: undefined reference to `initPassengers'
+collect2.exe: error: ld returned 1 exit status
+17:20:21 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:25:12: warning: unused variable 'unCesista' [-Wunused-variable]
+   25 |  Censistas unCesista;
+      |            ^~~~~~~~~
+..\src\ParcialCenso.c:22:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+17:54:25 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:49:16: warning: implicit declaration of function 'cargarUnPax' [-Wimplicit-function-declaration]
+   49 |     unCensista=cargarUnPax(&retornoCensista);
+      |                ^~~~~~~~~~~
+..\src\ParcialCenso.c:49:16: error: incompatible types when assigning to type 'Censistas' {aka 'struct <anonymous>'} from type 'int'
+..\src\ParcialCenso.c:25:12: warning: variable 'unCensista' set but not used [-Wunused-but-set-variable]
+   25 |  Censistas unCensista;
+      |            ^~~~~~~~~~
+..\src\ParcialCenso.c:22:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+17:55:51 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+..\src\Censistas.c: In function 'cargarUnCensista':
+..\src\Censistas.c:83:73: warning: passing argument 3 of 'pedirNumero' makes pointer from integer without a cast [-Wint-conversion]
+   83 |   if(pedirNumero(&unCensista.fecha.dia, "Ingrese dia de nacimiento: \n",1,31,2)== 0  && flagCarga==3){
+      |                                                                         ^
+      |                                                                         |
+      |                                                                         int
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:52: note: expected 'char *' but argument is of type 'int'
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |                                               ~~~~~^~~~~~~
+..\src\Censistas.c:83:6: error: too few arguments to function 'pedirNumero'
+   83 |   if(pedirNumero(&unCensista.fecha.dia, "Ingrese dia de nacimiento: \n",1,31,2)== 0  && flagCarga==3){
+      |      ^~~~~~~~~~~
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:5: note: declared here
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |     ^~~~~~~~~~~
+..\src\Censistas.c:84:74: warning: passing argument 3 of 'pedirNumero' makes pointer from integer without a cast [-Wint-conversion]
+   84 |    if(pedirNumero(&unCensista.fecha.mes, "Ingrese mes de nacimiento: \n",1,12,2)== 0){
+      |                                                                          ^
+      |                                                                          |
+      |                                                                          int
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:52: note: expected 'char *' but argument is of type 'int'
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |                                               ~~~~~^~~~~~~
+..\src\Censistas.c:84:7: error: too few arguments to function 'pedirNumero'
+   84 |    if(pedirNumero(&unCensista.fecha.mes, "Ingrese mes de nacimiento: \n",1,12,2)== 0){
+      |       ^~~~~~~~~~~
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:5: note: declared here
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |     ^~~~~~~~~~~
+..\src\Censistas.c:85:78: warning: passing argument 3 of 'pedirNumero' makes pointer from integer without a cast [-Wint-conversion]
+   85 |     if(pedirNumero(&unCensista.fecha.anio, "Ingrese anio de nacimiento : \n",1,12,2)== 0){
+      |                                                                              ^
+      |                                                                              |
+      |                                                                              int
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:52: note: expected 'char *' but argument is of type 'int'
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |                                               ~~~~~^~~~~~~
+..\src\Censistas.c:85:8: error: too few arguments to function 'pedirNumero'
+   85 |     if(pedirNumero(&unCensista.fecha.anio, "Ingrese anio de nacimiento : \n",1,12,2)== 0){
+      |        ^~~~~~~~~~~
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:5: note: declared here
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |     ^~~~~~~~~~~
+..\src\Censistas.c:94:93: warning: passing argument 3 of 'pedirNumero' makes pointer from integer without a cast [-Wint-conversion]
+   94 |    if(pedirNumero(&unCensista.domicilio.numero, "Ingrese la numeracion de su domicilio: \n",1,9999,2)== 0){
+      |                                                                                             ^
+      |                                                                                             |
+      |                                                                                             int
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:52: note: expected 'char *' but argument is of type 'int'
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |                                               ~~~~~^~~~~~~
+..\src\Censistas.c:94:7: error: too few arguments to function 'pedirNumero'
+   94 |    if(pedirNumero(&unCensista.domicilio.numero, "Ingrese la numeracion de su domicilio: \n",1,9999,2)== 0){
+      |       ^~~~~~~~~~~
+In file included from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Inputs.h:54:5: note: declared here
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |     ^~~~~~~~~~~
+17:58:20 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:25:12: warning: variable 'unCensista' set but not used [-Wunused-but-set-variable]
+   25 |  Censistas unCensista;
+      |            ^~~~~~~~~~
+..\src\ParcialCenso.c:22:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+18:04:21 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+18:08:01 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+18:13:17 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+18:16:28 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+19:39:36 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:22:6: warning: unused variable 'flagMenu' [-Wunused-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+..\src\Censistas.c:126:6: error: conflicting types for 'mostrarUnCensista'
+  126 | void mostrarUnCensista(Censistas unCensista){
+      |      ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Censistas.c:8:
+..\src\Censistas.h:41:5: note: previous declaration of 'mostrarUnCensista' was here
+   41 | int mostrarUnCensista(Censistas unCensista);
+      |     ^~~~~~~~~~~~~~~~~
+19:42:37 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:22:6: warning: variable 'flagMenu' set but not used [-Wunused-but-set-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+19:43:34 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:22:6: warning: variable 'flagMenu' set but not used [-Wunused-but-set-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+19:44:05 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:22:6: warning: variable 'flagMenu' set but not used [-Wunused-but-set-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+20:28:08 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+In file included from ..\src\Inputs.h:14,
+                 from ..\src\Inputs.c:8:
+..\src\Censistas.h:43:37: error: unknown type name 'len'
+   43 | buscarEspacioLibre(Censistas* list, len);
+      |                                     ^~~
+20:30:59 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+..\src\Censistas.c:136:5: error: redefinition of 'buscarEspacioLibre'
+  136 | int buscarEspacioLibre(Censistas* list, int len){
+      |     ^~~~~~~~~~~~~~~~~~
+..\src\Censistas.c:34:5: note: previous definition of 'buscarEspacioLibre' was here
+   34 | int buscarEspacioLibre(Censistas* list, int len){
+      |     ^~~~~~~~~~~~~~~~~~
+20:32:09 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:22:6: warning: variable 'flagMenu' set but not used [-Wunused-but-set-variable]
+   22 |  int flagMenu;
+      |      ^~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+20:32:38 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+21:47:50 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+..\src\Censistas.c: In function 'modificarCensista':
+..\src\Censistas.c:223:8: warning: implicit declaration of function 'mostrarSubMenu' [-Wimplicit-function-declaration]
+  223 |        mostrarSubMenu();
+      |        ^~~~~~~~~~~~~~
+..\src\Censistas.c:250:11: warning: implicit declaration of function 'pedirnumero'; did you mean 'pedirNumero'? [-Wimplicit-function-declaration]
+  250 |        if(pedirnumero(&list[indice].edad,"Ingrese la nueva edad: \n", "Error! edad incorrecta: \n", 18, 59, 2)== 0){
+      |           ^~~~~~~~~~~
+      |           pedirNumero
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: src\Censistas.o: in function `modificarCensista':
+C:\Users\pamel\Desktop\Parcial_Programacion\ParcialProgramacion1\ParcialCenso\Debug/../src/Censistas.c:250: undefined reference to `pedirnumero'
+collect2.exe: error: ld returned 1 exit status
+21:49:13 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso

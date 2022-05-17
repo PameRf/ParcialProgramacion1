@@ -1,0 +1,187 @@
+/*
+ * Censistas.c
+ *
+ *  Created on: 16 may. 2022
+ *      Author: pamel
+ */
+
+#include "Censistas.h"
+
+int inicializarCencista(Censistas* list, int len){
+
+	int retorno;
+	retorno=-1;
+
+		if (list != NULL && len > 0) {
+			for (int i = 0; i < len; i++) {
+				list[i].isEmpty = 1;
+				retorno=0;
+			}
+		}
+	return retorno;
+}
+
+int generarId(){
+
+	static int id = 1000;
+
+	id++;
+
+	return id;
+
+}
+
+int buscarEspacioLibre(Censistas* list, int len){
+
+	int retorno;
+	retorno = -1;
+
+		if(list != NULL && len > 0){
+			for(int i = 0; i < len; i++){
+
+				if(list[i].isEmpty == 1){
+					retorno = i;
+					break;
+				}
+			}
+		}
+	return retorno;
+}
+
+Censistas cargarUnCensista(int* retorno){
+
+	Censistas unCensista;
+
+	int flagCarga;
+	flagCarga=0;
+
+
+		unCensista.id=generarId();
+
+		if(pedirCaracteres(unCensista.nombre,"Ingrese el nombre: \n",50)== 0){
+
+			flagCarga=1;
+		}
+		else{
+
+			printf("Error no se pudo cargar nombre invalido");
+			flagCarga=0;
+		}
+		if(flagCarga != 0){
+		if(pedirCaracteres(unCensista.apellido,"Ingrese el apellido: \n",50)== 0 && flagCarga==1){
+
+			flagCarga=2;
+		}
+		else{
+			printf("Error no se pudo cargar apellido invalido");
+			flagCarga=0;
+		}
+		if(pedirNumero(&unCensista.edad,"Ingrese la edad: \n", "Error! edad invalida: \n", 18, 59, 2)== 0 && flagCarga==2){
+
+			flagCarga=3;
+		}
+		else{
+			printf("Error no se pudo cargar edad");
+			flagCarga=0;
+		}
+		if(pedirNumero(&unCensista.fecha.dia, "Ingrese dia de nacimiento: \n", "Error! dato invalido \n",1,31,2)== 0  && flagCarga==3){
+			if(pedirNumero(&unCensista.fecha.mes, "Ingrese mes de nacimiento: \n","Error! dato invalido \n",1,12,2)== 0){
+				if(pedirNumero(&unCensista.fecha.anio, "Ingrese anio de nacimiento : \n", "Error! dato invalido \n",1962, 2003,2)== 0){
+
+					flagCarga=4;
+			}
+		 }
+		}
+		else{
+			printf("Error no se pudo cargar fecha de nacimiento");
+			flagCarga=0;
+		}
+		if(pedirCaracteres(unCensista.domicilio.calle, "Ingrese calle de cencista",50)== 0 && flagCarga==4){
+			if(pedirNumero(&unCensista.domicilio.numero, "Ingrese la numeracion de su domicilio: \n", "Error! dato invalido \n",1,9999,2)== 0){
+			flagCarga=5;
+		 }
+		}
+		else{
+			printf("Error no se pudo cargar domicilio");
+			flagCarga=0;
+		}
+
+		if(flagCarga== 5){
+
+			unCensista.isEmpty= 0;
+			*retorno=0;
+
+			printf("se pudo cargar en funcion \n");
+      }
+	}
+		else{
+			printf("No se pudo cargar en censista \n");
+		}
+
+	//printPassenger(unPasajero);
+ return unCensista;
+
+}
+
+void mostrarUnCensista(Censistas unCensista){
+
+
+	if (unCensista.isEmpty == 0){
+
+	printf("%-4d %-15s %-19s %-10d %d/%d/%d %10s %d \n", unCensista.id,  unCensista.nombre, unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes,unCensista.fecha.anio, unCensista.domicilio.calle,unCensista.domicilio.numero);
+
+	}
+
+}
+
+
+
+int addCensitas(Censistas* list, int len, int id, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero){
+
+	int retorno;
+	int espacioLibre;
+
+
+	retorno = -1;
+
+	if (list != NULL && nombre != NULL && apellido != NULL && domicilio!= NULL && len > 0){
+
+
+	espacioLibre= buscarEspacioLibre(list, len);
+	//printf("espacio libre %d \n", espacioLibre);
+
+		if (espacioLibre != -1) {
+
+		//	printf("espacio libre %d", espacioLibre);
+
+
+			list[espacioLibre].isEmpty = 0;
+
+			list[espacioLibre].id= id;
+
+			strncpy(list[espacioLibre].nombre, nombre, sizeof(list[espacioLibre].nombre));
+
+			strncpy(list[espacioLibre].apellido, apellido, sizeof(list[espacioLibre].apellido));
+
+			list[espacioLibre].edad= edad;
+
+			list[espacioLibre].fecha.dia= fechaDia;
+
+			list[espacioLibre].fecha.mes= fechaMes;
+
+			list[espacioLibre].fecha.anio= fechaAnio;
+
+			strncpy(list[espacioLibre].domicilio.calle, domicilio, sizeof(list[espacioLibre].domicilio.calle));
+
+			list[espacioLibre].domicilio.numero= domicilioNumero;
+
+			//printf("valor de isEmpty en add en if %d \n", list[espacioLibre].isEmpty);
+
+			mostrarUnCensista(list[espacioLibre]);
+
+			retorno = 0;
+		}
+	}
+
+	return retorno;
+}

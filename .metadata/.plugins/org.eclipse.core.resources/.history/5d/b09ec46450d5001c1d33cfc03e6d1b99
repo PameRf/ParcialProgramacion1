@@ -1,0 +1,31 @@
+/*
+ * Censistas.h
+ *
+ *  Created on: 16 may. 2022
+ *      Author: pamel
+ */
+
+#ifndef CENSISTAS_H_
+#define CENSISTAS_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Inputs.h"
+
+typedef struct{
+	int dia;
+	char mes[50];
+	int anio;
+}FechaNacimiento;
+
+typedef struct{
+	char nombre[50];
+	char apellido[50];
+	int edad;
+	FechaNacimiento;
+	char direccion[50];
+}Censistas;
+
+
+#endif /* CENSISTAS_H_ */

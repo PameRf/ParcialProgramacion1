@@ -1,0 +1,76 @@
+/*
+ ============================================================================
+ Name        : ParcialCenso.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Inputs.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int opcionMenu;
+	int validarMenu;
+	//int flagMenu;
+
+
+	//validarRetorno=initPassengers(pasajeros, CANTIDAD_PASAJEROS);
+
+	//printf("Se pudo inicializar %d\n",validarRetorno);
+
+	do{
+	printf("1. Cargar Censista \n");
+	printf("2. Modificar Censista \n");
+	printf("3. Dar de baja  Censista \n");
+	printf("4. Cargar zona a Censar \n");
+	printf("5. Asignar zona a Censar\n");
+	printf("6. Cargar datos\n");
+	printf("7. Mostrar Censista\n");
+	printf("8. Mostrar zonas\n");
+	printf("9. Salir\n");
+
+
+
+	if(validarMenu== 0){
+		switch(opcionMenu){
+			case 1:
+
+				break;
+			case 2:
+
+
+				break;
+			case 3:
+
+				break;
+			case 4:
+				break;
+			case 5:
+				break;
+			case 6:
+				printf("Gracias por elegir Smart Travel\n");
+				break;
+			case 7:
+				printf("Gracias por elegir Smart Travel\n");
+				break;
+			case 8:
+				printf("Gracias por elegir Smart Travel\n");
+				break;
+			case 9:
+				printf("Gracias por elegir Smart Travel\n");
+				break;
+
+
+		}
+	}
+
+	}while(opcionMenu != 9);
+
+	return EXIT_SUCCESS;
+}
