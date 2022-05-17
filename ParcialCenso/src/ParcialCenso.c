@@ -12,7 +12,9 @@
 #include <stdlib.h>
 #include "Inputs.h"
 #include "Censistas.h"
+#include "Zonas.h"
 #define LEN_CENSISTAS 10
+#define LEN_ZONAS 50
 
 int main(void) {
 	setbuf(stdout,NULL);
@@ -20,15 +22,20 @@ int main(void) {
 	int opcionMenu;
 	int validarMenu;
 	int validarRetorno;
+	int validarRetornoZonas;
 	Censistas censitas[LEN_CENSISTAS];
 	Censistas unCensista;
+	Zonas zonas[LEN_ZONAS];
+	Zonas unaZona;
 	int retornoCensista;
+	int retornoZona;
 	int idModificar;
 
 
-	validarRetorno=inicializarCencista(censitas, LEN_CENSISTAS);
-
-	printf("Se pudo inicializar %d\n",validarRetorno);
+	validarRetorno= inicializarCencista(censitas, LEN_CENSISTAS);
+	validarRetornoZonas= inicializarZona(zonas,LEN_ZONAS);
+	printf("Se pudo inicializar censistas %d\n",validarRetorno);
+	printf("Se pudo inicializar zonas %d\n",validarRetornoZonas);
 
 	do{
 	printf("1. Cargar Censista \n");
@@ -48,7 +55,7 @@ int main(void) {
 			case 1:
 				unCensista=cargarUnCensista(&retornoCensista);
 				if(retornoCensista==0){
-					addCensitas(censitas, LEN_CENSISTAS, unCensista.id, unCensista.nombre,unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes ,unCensista.fecha.anio, unCensista.domicilio.calle, unCensista.domicilio.numero);
+					addCensitas(censitas, LEN_CENSISTAS, unCensista.idCensista, unCensista.nombre,unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes ,unCensista.fecha.anio, unCensista.domicilio.calle, unCensista.domicilio.numero,unCensista.estado);
 				}
 				break;
 			case 2:
@@ -56,10 +63,18 @@ int main(void) {
 				modificarCensista(censitas, LEN_CENSISTAS, idModificar);
 				break;
 			case 3:
+				pedirNumero(&idModificar,"Ingrese el id del censista a dar de baja \n", "Error el id es invalido\n",1001,1200,2);
+				darBajaCensista(censitas, LEN_CENSISTAS, idModificar);
 				printf("opcion 3 \n");
 				break;
 			case 4:
-				printf("opcion 4 \n");
+				unaZona= cargarUnaZona(&retornoZona);
+				if(retornoZona==0){
+
+					mostrarUnaZona(unaZona);
+
+				}
+
 				break;
 			case 5:
 				printf("opcion 5 \n");

@@ -12,6 +12,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Censistas.h"
+#include "Zonas.h"
 
 /// @brief la funcion recibe la cadena que carga el usuario llamo a fgets para guardarlo en una cadena auxiliar
 /// recorro la cadena aux hasta el enter y antes del mismo posicion le asigno el '\0' y copio la cadena auxiliar a la cadena recibida

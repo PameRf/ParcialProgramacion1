@@ -262,3 +262,178 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
 gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
 Info: Nothing to build for ParcialCenso
+15:58:55 **** Rebuild of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:51:6: error: too few arguments to function 'addCensitas'
+   51 |      addCensitas(censitas, LEN_CENSISTAS, unCensista.id, unCensista.nombre,unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes ,unCensista.fecha.anio, unCensista.domicilio.calle, unCensista.domicilio.numero);
+      |      ^~~~~~~~~~~
+In file included from ..\src\Inputs.h:14,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Censistas.h:47:5: note: declared here
+   47 | int addCensitas(Censistas* list, int len, int id, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero, int estado);
+      |     ^~~~~~~~~~~
+16:00:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+16:06:54 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+..\src\Censistas.c: In function 'modificarCensista':
+..\src\Censistas.c:309:1: warning: control reaches end of non-void function [-Wreturn-type]
+  309 | }
+      | ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+16:08:41 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+16:13:54 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+16:14:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" 
+Info: Nothing to build for ParcialCenso
+17:30:52 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:24:6: warning: variable 'validarRetorno' set but not used [-Wunused-but-set-variable]
+   24 |  int validarRetorno;
+      |      ^~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'cargarUnaZona':
+..\src\Zonas.c:62:18: warning: passing argument 1 of 'pedirNumero' from incompatible pointer type [-Wincompatible-pointer-types]
+   62 |   if(pedirNumero(&unaZona.localidad,"Ingrese localidad a censar 1 (LANUS) 2 (LOMAS DE ZAMORA) 3 (AVELLANEDA) 4 (BANDFIELD) \n", "Error! dato invalido",1, 4, 2)== 0){
+      |                  ^~~~~~~~~~~~~~~~~~
+      |                  |
+      |                  int (*)[4]
+In file included from ..\src\Zonas.h:14,
+                 from ..\src\Zonas.c:8:
+..\src\Inputs.h:54:22: note: expected 'int *' but argument is of type 'int (*)[4]'
+   54 | int pedirNumero(int* pNumero, char mensaje[], char error[], int minimo, int maximo, int reintentos);
+      |                 ~~~~~^~~~~~~
+..\src\Zonas.c: In function 'mostrarUnaZona':
+..\src\Zonas.c:108:23: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int *' [-Wformat=]
+  108 |  printf("%-4d %-4d %-4d %-10s %-10s %-10s %-10s\n", unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calle_1, unaZona.cuadra.calle_2, unaZona.cuadra.calle_3, unaZona.cuadra.calle_4);
+      |                    ~~~^                                                             ~~~~~~~~~~~~~~~~~
+      |                       |                                                                    |
+      |                       int                                                                  int *
+      |                    %-4n
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+17:36:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'mostrarUnaZona':
+..\src\Zonas.c:108:23: warning: '-' flag used with '%n' ms_printf format [-Wformat=]
+  108 |  printf("%-4d %-4d %-4n %-10s %-10s %-10s %-10s\n", unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calle_1, unaZona.cuadra.calle_2, unaZona.cuadra.calle_3, unaZona.cuadra.calle_4);
+      |                       ^
+..\src\Zonas.c:108:23: warning: field width used with '%n' ms_printf format [-Wformat=]
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:35:2: error: 'validarRetorno' undeclared (first use in this function); did you mean 'validarRetornoZonas'?
+   35 |  validarRetorno= inicializarCencista(censitas, LEN_CENSISTAS);
+      |  ^~~~~~~~~~~~~~
+      |  validarRetornoZonas
+..\src\ParcialCenso.c:35:2: note: each undeclared identifier is reported only once for each function it appears in
+17:38:42 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+17:44:59 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'cargarUnaZona':
+..\src\Zonas.c:91:37: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int *' [-Wformat=]
+   91 |    printf("se pudo zona en funcion %d\n",retorno);
+      |                                    ~^    ~~~~~~~
+      |                                     |    |
+      |                                     int  int *
+      |                                    %n
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialCenso.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+17:45:47 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+17:48:15 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+18:48:50 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:51:00 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'mostrarUnaZona':
+..\src\Zonas.c:114:22: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int *' [-Wformat=]
+  114 |  printf("%-4d %-4d %4d %10s %10s %10s %10s\n", unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calleUno,
+      |                    ~~^                                                         ~~~~~~~~~~~~~~~~~
+      |                      |                                                                |
+      |                      int                                                              int *
+      |                    %4n
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+18:55:32 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:57:35 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+19:02:40 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'mostrarUnaZona':
+..\src\Zonas.c:108:24: warning: format '%d' expects argument of type 'int', but argument 4 has type 'int *' [-Wformat=]
+  108 |   printf("%-4d %-4d %-4d %-10s %-15s %-15s %10s\n", unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calleUno,
+      |                     ~~~^                                                            ~~~~~~~~~~~~~~~~~
+      |                        |                                                                   |
+      |                        int                                                                 int *
+      |                     %-4n
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+19:03:33 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+19:05:53 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 

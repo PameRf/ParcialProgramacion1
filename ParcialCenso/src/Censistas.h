@@ -12,6 +12,10 @@
 #include <stdlib.h>
 #include <string.h>
 #include "Inputs.h"
+#define ACTIVO 1
+#define INACTIVO 2
+#define LIBERADO 3
+
 
 typedef struct{
 	int dia;
@@ -25,12 +29,13 @@ typedef struct{
 }Direccion;
 
 typedef struct{
-	int id;
+	int idCensista;
 	char nombre[50];
 	char apellido[50];
 	int edad;
 	FechaNacimiento fecha;
 	Direccion domicilio;
+	int estado;
 	int isEmpty;
 }Censistas;
 
@@ -39,7 +44,7 @@ int generarId();
 int buscarEspacioLibre(Censistas* list, int len);
 Censistas cargarUnCensista(int* retorno);
 void mostrarUnCensista(Censistas unCensista);
-int addCensitas(Censistas* list, int len, int id, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero);
+int addCensitas(Censistas* list, int len, int idCensista, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero, int estado);
 int modificarCensista(Censistas* list, int len, int id);
-
+int darBajaCensista(Censistas* list, int len, int id);
 #endif /* CENSISTAS_H_ */

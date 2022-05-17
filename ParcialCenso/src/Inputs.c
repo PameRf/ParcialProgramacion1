@@ -217,7 +217,8 @@ void mostrarSubMenu(){
 			"2. Apellido \n"
 			"3. Edad \n"
 			"4. Fecha de nacimiento\n"
-			"5. Domicilio \n"	);
+			"5. Domicilio \n"
+			"6. Estado \n"	);
 
 	}
 

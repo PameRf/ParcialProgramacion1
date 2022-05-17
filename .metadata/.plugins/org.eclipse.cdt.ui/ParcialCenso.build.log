@@ -1,1 +1,7 @@
-Info: Nothing to build for ParcialCenso
+19:05:53 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+
+19:05:54 Build Finished. 0 errors, 0 warnings. (took 575ms)
+

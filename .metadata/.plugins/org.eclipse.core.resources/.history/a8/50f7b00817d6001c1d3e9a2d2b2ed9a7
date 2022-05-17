@@ -1,0 +1,19 @@
+/*
+ * Zonas.h
+ *
+ *  Created on: 17 may. 2022
+ *      Author: pamel
+ */
+
+#ifndef ZONAS_H_
+#define ZONAS_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Inputs.h"
+#include "Censistas.h"
+
+
+
+#endif /* ZONAS_H_ */

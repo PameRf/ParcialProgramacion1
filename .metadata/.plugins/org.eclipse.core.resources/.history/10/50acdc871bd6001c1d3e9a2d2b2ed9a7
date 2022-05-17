@@ -1,0 +1,33 @@
+/*
+ * Zonas.h
+ *
+ *  Created on: 17 may. 2022
+ *      Author: pamel
+ */
+
+#ifndef ZONAS_H_
+#define ZONAS_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Inputs.h"
+#include "Censistas.h"
+
+typedef struct {
+    char calle_1[50];
+    char calle_2[50];
+    char calle_3[50];
+    char calle_4[50];
+}Cuadras;
+
+typedef struct {
+    int idZona;
+    int estado;
+	int idCensista; // FK
+ 	int localidad;
+ 	Cuadras cuadra;
+	int isEmpty;
+}Zonas;
+
+#endif /* ZONAS_H_ */

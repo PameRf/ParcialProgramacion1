@@ -1,0 +1,27 @@
+/*
+ * Zonas.h
+ *
+ *  Created on: 17 may. 2022
+ *      Author: pamel
+ */
+
+#ifndef ZONAS_H_
+#define ZONAS_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "Inputs.h"
+#include "Censistas.h"
+
+typedef struct {
+    int idZona;
+    int estado;
+	int motivo;
+	int idAsociado; // FK
+    int idAmbulancia;
+	float tiempoInsumido;
+	int isEmpty;
+} Zonas;
+
+#endif /* ZONAS_H_ */
