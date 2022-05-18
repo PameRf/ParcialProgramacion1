@@ -90,14 +90,13 @@ int main(void) {
 				cargarCensados(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
 				break;
 			case 7:
-				printCensistas(censistas, LEN_CENSISTAS);
+				printCensistas( censistas, LEN_CENSISTAS);
 				break;
 			case 8:
 				printf("opcion 8 \n");
 				break;
 			case 9:
-				cargaForzadaDeCensistas(censistas);
-				 printCensistas(censistas, LEN_CENSISTAS);
+				printf("Gracias \n");
 				break;
 			case 10:
 				printf("Gracias \n");

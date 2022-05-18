@@ -60,7 +60,7 @@ int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, in
 
 	int retorno;
 	int indiceCensista;
-
+	int auxId;
 	retorno=-1;
 
 	if (list != NULL && len > 0){
@@ -69,7 +69,7 @@ int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, in
 
 			if(list[i].idCensista != -1){
 
-			indiceCensista=buscarCensistaById(arrayCensistas,lenCensistas, list[i].idCensista);
+			indiceCensista=buscarCensistaById(arrayCensistas,lenCensistas,auxId);
 			mostrarUnaZona(list[i]);
 			mostrarNombreYapellidoCensista(arrayCensistas[indiceCensista]);
 			retorno=0;

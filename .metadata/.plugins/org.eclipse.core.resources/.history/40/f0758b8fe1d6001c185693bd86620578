@@ -14,6 +14,6 @@
 #include "Censistas.h"
 
 int cargarCensados(Zonas* list, int len, Censistas* arrayCensistas, int lenCensistas);
-int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas);
+
 
 #endif /* INFORMES_H_ */

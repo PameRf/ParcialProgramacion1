@@ -385,12 +385,12 @@ int cargaForzadaDeCensistas(Censistas* list){
 
 	int retorno;
 
-	Censistas censistaAux[6] = {{1001, "Juan", "Martinez",34, {23,2,1997},{"Montevideo",1433}, 2},
-	           {1002, "Roberto", "Gomez", 25, {4 ,3 ,1995},{"Diaz Velez",1346}, 2},
-				{1003, "Ezequiel", "Freire", 36, {28, 4, 1987},{"Viamonte",1568}, 2},
-	            {1004, "Dario", "Gomez",28, {14, 12, 1993},{"Callao",2345}, 2},
-	            {1005, "Jose", "Romano",20, {22, 3, 1989},{"Talcahuano",2366}, 2},
-	            {1006, "Laura", "Torres", 23, {4, 10, 1995},{"San Martin",1340}, 2}};
+	Censistas censistaAux[1] = {{1001, "Juan", "Martinez",34, {23,2,1997},{"Montevideo"1433}, 2}};
+	           /* {1002, "Roberto", "Gomez", 25,{4 ,3 ,1995},{"Diaz Velez",1346}, 2},
+				{1003, "Ezequiel", "Freire",36, {28, 4, 1987},{"Viamonte",1568}, 2},
+	            {1004, "Dario", "Gomez",28, {14, 12, 1993},{"Callao"2345}, 2},
+	            {1005, "Jose", "Romano",20, {22, 3, 1989},{"Talcahuano"2366}, 2},
+	            {1006, "Laura", "Torres", 23, {4, 10, 1995},{"San Martin",1340}, 2}};*/
 	retorno=-1;
 
 	for(int i=0; i< 6; i++){

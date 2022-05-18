@@ -104,37 +104,10 @@ Zonas cargarUnaZona(int* retorno){
 
 void mostrarUnaZona(Zonas unaZona){
 
-	char auxLocalidad[40];
-	char auxEstado[40];
-
-	switch(unaZona.localidad){
-
-		case LANUS:
-		strcpy(auxLocalidad, "LANUS");
-		break;
-		case LOMAS_DE_ZAMORA:
-		strcpy (auxLocalidad, "LOMAS_DE_ZAMORA");
-		break;
-		case AVELLANEDA:
-		strcpy(auxLocalidad, "AVELLANEDA");
-		break;
-		case BANDFIELD:
-		strcpy(auxLocalidad, "BANDFIELD");
-		break;
-	}
-	switch(unaZona.estado){
-
-		case PENDIENTE:
-		strcpy(auxEstado, "PENDIENTE");
-		break;
-		case FINALIZADO:
-		strcpy (auxEstado, "FINALIZADO");
-		break;
-	}
 
 	if (unaZona.isEmpty == 0){
 
-		printf("%-4d %-10s %-4d %-10s %-10s %-17s %-15s %10s\n", unaZona.idZona, auxEstado, unaZona.idCensista, auxLocalidad, unaZona.cuadra.calleUno,
+		printf("%-4d %-4d %-4d %-4d %-10s %-17s %-15s %10s\n", unaZona.idZona, unaZona.estado, unaZona.idCensista, unaZona.localidad, unaZona.cuadra.calleUno,
 					unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
 
 	}

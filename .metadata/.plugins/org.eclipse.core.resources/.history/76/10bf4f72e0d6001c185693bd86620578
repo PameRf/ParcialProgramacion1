@@ -49,6 +49,4 @@ int addCensitas(Censistas* list, int len, int idCensista, char nombre[],char ape
 int modificarCensista(Censistas* list, int len, int id);
 int darBajaCensista(Censistas* list, int len, int id);
 int printCensistas(Censistas* list, int len);
-void mostrarNombreYapellidoCensista(Censistas unCensista);
-int cargaForzadaDeCensistas(Censistas* list);
 #endif /* CENSISTAS_H_ */

@@ -14,6 +14,7 @@
 #include "Censistas.h"
 #include "Zonas.h"
 #include "Informes.h"
+
 #define LEN_CENSISTAS 10
 #define LEN_ZONAS 50
 
@@ -51,7 +52,7 @@ int main(void) {
 	printf("8. Mostrar zonas\n");
 	printf("9. Salir\n");
 
-	validarMenu= pedirNumero(&opcionMenu, "Ingrese una opcion \n", "Error! Ingrese una opcion valida: \n",1, 12, 2);
+	validarMenu= pedirNumero(&opcionMenu, "Ingrese una opcion \n", "Error! Ingrese una opcion valida: \n",1, 9, 2);
 
 	if(validarMenu== 0){
 		switch(opcionMenu){
@@ -90,22 +91,12 @@ int main(void) {
 				cargarCensados(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
 				break;
 			case 7:
-				printCensistas(censistas, LEN_CENSISTAS);
+				printf("opcion 7 \n");
 				break;
 			case 8:
 				printf("opcion 8 \n");
 				break;
 			case 9:
-				cargaForzadaDeCensistas(censistas);
-				 printCensistas(censistas, LEN_CENSISTAS);
-				break;
-			case 10:
-				printf("Gracias \n");
-				break;
-			case 11:
-				printf("Gracias \n");
-				break;
-			case 12:
 				printf("Gracias \n");
 				break;
 
@@ -113,7 +104,7 @@ int main(void) {
 		}
 	}
 
-	}while(opcionMenu != 12);
+	}while(opcionMenu != 9);
 
 	return EXIT_SUCCESS;
 }

@@ -56,28 +56,4 @@ int cargarCensados(Zonas* list, int len, Censistas *arrayCensistas, int lenCensi
 }
 
 
-int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas){
-
-	int retorno;
-	int indiceCensista;
-
-	retorno=-1;
-
-	if (list != NULL && len > 0){
-
-		for(int i = 0; i < len; i++){
-
-			if(list[i].idCensista != -1){
-
-			indiceCensista=buscarCensistaById(arrayCensistas,lenCensistas, list[i].idCensista);
-			mostrarUnaZona(list[i]);
-			mostrarNombreYapellidoCensista(arrayCensistas[indiceCensista]);
-			retorno=0;
-			}
-		}
-
-	}
- return retorno;
-}
-
 
