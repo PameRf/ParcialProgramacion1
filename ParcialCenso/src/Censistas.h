@@ -42,6 +42,7 @@ typedef struct{
 int inicializarCencista(Censistas* list, int len);
 int generarId();
 int buscarEspacioLibre(Censistas* list, int len);
+int buscarCensistaById(Censistas* list, int len,int id);
 Censistas cargarUnCensista(int* retorno);
 void mostrarUnCensista(Censistas unCensista);
 int addCensitas(Censistas* list, int len, int idCensista, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero, int estado);

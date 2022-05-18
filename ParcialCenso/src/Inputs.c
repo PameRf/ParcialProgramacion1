@@ -222,4 +222,15 @@ void mostrarSubMenu(){
 
 	}
 
+void mostrarSubMenuZonas(){
+
+	printf("Elija la opcion que desea mofificar: \n"
+			"1. Localidad \n"
+			"2. Calle uno \n"
+			"3. Calle dos \n"
+			"4. Calle tres\n"
+			"5. Calle cuatro \n");
+
+	}
+
 

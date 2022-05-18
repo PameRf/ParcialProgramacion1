@@ -32,7 +32,7 @@ typedef struct {
     int idZona;
     int estado;
 	int idCensista; // FK
- 	int localidad[4];
+ 	int localidad;
  	Cuadras cuadra;
 	int isEmpty;
 }Zonas;
@@ -42,5 +42,11 @@ int generarIdZonas();
 int buscarEspacioLibreZonas(Zonas* list, int len);
 Zonas cargarUnaZona(int* retorno);
 void mostrarUnaZona(Zonas unaZona);
+int addZonas(Zonas* list, int len, int id, int idCensista, int estado, int localidad,char calle1[], char calle2[], char calle3[], char calle4[]);
+int buscarZonaById(Zonas* list, int len,int id);
+int modificarZona(Zonas* list, int len, int id);
+int darBajaZona(Zonas* list, int len, int id);
+int buscarZonaCargada(Zonas list[], int len);
+int asignarZona(Zonas* list, int len, int idCencista);
 
 #endif /* ZONAS_H_ */

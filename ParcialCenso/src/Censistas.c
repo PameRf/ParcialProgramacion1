@@ -59,9 +59,7 @@ int buscarCensistaById(Censistas* list, int len,int id){
 			if (list[i].idCensista == id && list[i].isEmpty == 0){
 
 			  retorno = i;
-			 // printf("Valor de i en if %d", i);
-			 // printf("valor de retorno en if de find paseng by id %d \n", list[i].isEmpty);
-			 return retorno;
+			  return retorno;
 			}
 		}
 	}
@@ -292,15 +290,16 @@ int modificarCensista(Censistas* list, int len, int id){
 					 if(pedirNumero(&list[indice].estado,"Ingrese estado 1(ACTIVO), 2(INACTIVO) 3 (LIBERADO) \n", "Error! OPCION invalida: \n", 1, 3, 2)== 0){
 						 printf("El nuevo estado fue cargado correctamente\n");
 
-						 mostrarUnCensista(list[indice]);
 
-					    retorno = 0;
 						}
 					else{
 							printf("Error no se pudo cargar nuevo estado\n");
 						}
 				 break;
 				 }
+    		 mostrarUnCensista(list[indice]);
+
+    		 retorno = 0;
     	}
 	}
 	 return retorno;

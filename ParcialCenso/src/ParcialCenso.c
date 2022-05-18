@@ -23,7 +23,7 @@ int main(void) {
 	int validarMenu;
 	int validarRetorno;
 	int validarRetornoZonas;
-	Censistas censitas[LEN_CENSISTAS];
+	Censistas censistas[LEN_CENSISTAS];
 	Censistas unCensista;
 	Zonas zonas[LEN_ZONAS];
 	Zonas unaZona;
@@ -32,7 +32,9 @@ int main(void) {
 	int idModificar;
 
 
-	validarRetorno= inicializarCencista(censitas, LEN_CENSISTAS);
+
+
+	validarRetorno= inicializarCencista(censistas, LEN_CENSISTAS);
 	validarRetornoZonas= inicializarZona(zonas,LEN_ZONAS);
 	printf("Se pudo inicializar censistas %d\n",validarRetorno);
 	printf("Se pudo inicializar zonas %d\n",validarRetornoZonas);
@@ -55,29 +57,33 @@ int main(void) {
 			case 1:
 				unCensista=cargarUnCensista(&retornoCensista);
 				if(retornoCensista==0){
-					addCensitas(censitas, LEN_CENSISTAS, unCensista.idCensista, unCensista.nombre,unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes ,unCensista.fecha.anio, unCensista.domicilio.calle, unCensista.domicilio.numero,unCensista.estado);
+					addCensitas(censistas, LEN_CENSISTAS, unCensista.idCensista, unCensista.nombre,unCensista.apellido, unCensista.edad, unCensista.fecha.dia, unCensista.fecha.mes ,unCensista.fecha.anio, unCensista.domicilio.calle, unCensista.domicilio.numero,unCensista.estado);
 				}
 				break;
 			case 2:
 				pedirNumero(&idModificar,"Ingrese el id del censista a modificar \n", "Error el id es invalido\n",1001,1200,2);
-				modificarCensista(censitas, LEN_CENSISTAS, idModificar);
+				modificarCensista(censistas, LEN_CENSISTAS, idModificar);
 				break;
 			case 3:
 				pedirNumero(&idModificar,"Ingrese el id del censista a dar de baja \n", "Error el id es invalido\n",1001,1200,2);
-				darBajaCensista(censitas, LEN_CENSISTAS, idModificar);
-				printf("opcion 3 \n");
+				darBajaCensista(censistas, LEN_CENSISTAS, idModificar);
 				break;
 			case 4:
+
 				unaZona= cargarUnaZona(&retornoZona);
 				if(retornoZona==0){
-
-					mostrarUnaZona(unaZona);
-
+					addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.idCensista, unaZona.estado, unaZona.localidad, unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
 				}
 
 				break;
 			case 5:
-				printf("opcion 5 \n");
+				pedirNumero(&idModificar,"Ingrese el id del censista a asignar zona \n", "Error el id es invalido\n",1001,1200,2);
+				if(buscarCensistaById(censistas, LEN_CENSISTAS, idModificar) != -1){
+				if(asignarZona(zonas, LEN_ZONAS, idModificar)==0){
+					printf("Se pudo cargar censista a zona6 \n");
+				}
+				}
+
 				break;
 			case 6:
 				printf("opcion 6 \n");

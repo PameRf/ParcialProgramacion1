@@ -437,3 +437,236 @@ Info: Nothing to build for ParcialCenso
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
 gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+20:16:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Zonas.h:45:92: error: redefinition of parameter 'calle1'
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad[],char calle1[], char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                                                       ~~~~~^~~~~~~~
+..\src\Zonas.h:45:77: note: previous definition of 'calle1' was here
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad[],char calle1[], char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                                        ~~~~~^~~~~~~~
+20:17:59 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:139:32: error: assignment to expression with array type
+  139 |    list[espacioLibre].localidad=localidad;
+      |                                ^
+20:19:24 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:74:72: warning: passing argument 5 of 'addZonas' makes integer from pointer without a cast [-Wint-conversion]
+   74 |      addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
+      |                                                                 ~~~~~~~^~~~~~~~~~
+      |                                                                        |
+      |                                                                        int *
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:45:60: note: expected 'int' but argument is of type 'int *'
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad,char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                        ~~~~^~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:125:32: warning: comparison between pointer and integer
+  125 |  if (list != NULL && localidad != NULL && calle1 != NULL && calle2!= NULL && calle3!= NULL && calle4 != NULL && len > 0){
+      |                                ^~
+..\src\Zonas.c:139:32: error: assignment to expression with array type
+  139 |    list[espacioLibre].localidad=localidad;
+      |                                ^
+09:49:36 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:76:82: warning: passing argument 5 of 'addZonas' makes pointer from integer without a cast [-Wint-conversion]
+   76 |      addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.estado, unaZona.localidad[i], unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
+      |                                                                 ~~~~~~~~~~~~~~~~~^~~
+      |                                                                                  |
+      |                                                                                  int
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:45:60: note: expected 'int *' but argument is of type 'int'
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad[],char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                        ~~~~^~~~~~~~~~~
+..\src\ParcialCenso.c:76:82: warning: 'i' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   76 |      addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.estado, unaZona.localidad[i], unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
+      |                                                                 ~~~~~~~~~~~~~~~~~^~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:139:32: error: assignment to expression with array type
+  139 |    list[espacioLibre].localidad=localidad[i];
+      |                                ^
+09:52:28 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:76:72: warning: passing argument 5 of 'addZonas' makes integer from pointer without a cast [-Wint-conversion]
+   76 |      addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.estado, unaZona.localidad, unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
+      |                                                                 ~~~~~~~^~~~~~~~~~
+      |                                                                        |
+      |                                                                        int *
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:45:60: note: expected 'int' but argument is of type 'int *'
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad,char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                        ~~~~^~~~~~~~~
+..\src\ParcialCenso.c:33:6: warning: unused variable 'i' [-Wunused-variable]
+   33 |  int i;
+      |      ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:125:32: warning: comparison between pointer and integer
+  125 |  if (list != NULL && localidad != NULL && calle1 != NULL && calle2!= NULL && calle3!= NULL && calle4 != NULL && len > 0){
+      |                                ^~
+..\src\Zonas.c:139:32: error: assignment to expression with array type
+  139 |    list[espacioLibre].localidad=localidad;
+      |                                ^
+..\src\Zonas.c:121:6: warning: unused variable 'i' [-Wunused-variable]
+  121 |  int i;
+      |      ^
+09:57:21 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:139:32: error: assignment to expression with array type
+  139 |    list[espacioLibre].localidad=localidad[espacioLibre];
+      |                                ^
+09:59:04 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:72:5: error: a label can only be part of a statement and a declaration is not a statement
+   72 |     int i;
+      |     ^~~
+..\src\ParcialCenso.c:78:82: warning: passing argument 5 of 'addZonas' makes pointer from integer without a cast [-Wint-conversion]
+   78 |      addZonas(zonas, LEN_ZONAS, unaZona.idZona, unaZona.estado, unaZona.localidad[i], unaZona.cuadra.calleUno, unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
+      |                                                                 ~~~~~~~~~~~~~~~~~^~~
+      |                                                                                  |
+      |                                                                                  int
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:45:60: note: expected 'int *' but argument is of type 'int'
+   45 | int addZonas(Zonas* list, int len, int id, int estado, int localidad[],char calle1[], char calle2[], char calle3[], char calle4[]);
+      |                                                        ~~~~^~~~~~~~~~~
+10:00:39 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'cargarUnaZona':
+..\src\Zonas.c:62:36: error: subscripted value is neither array nor pointer nor vector
+   62 |   if(pedirNumero(&unaZona.localidad[i],"Ingrese localidad a censar 1 (LANUS) 2 (LOMAS DE ZAMORA) 3 (AVELLANEDA) 4 (BANDFIELD) \n", "Error! dato invalido",1, 4, 2)== 0){
+      |                                    ^
+..\src\Zonas.c:57:9: warning: variable 'i' set but not used [-Wunused-but-set-variable]
+   57 |     int i=0;
+      |         ^
+..\src\Zonas.c: In function 'mostrarUnaZona':
+..\src\Zonas.c:105:7: warning: unused variable 'i' [-Wunused-variable]
+  105 |   int i;
+      |       ^
+..\src\Zonas.c: In function 'addZonas':
+..\src\Zonas.c:125:32: warning: comparison between pointer and integer
+  125 |  if (list != NULL && localidad != NULL && calle1 != NULL && calle2!= NULL && calle3!= NULL && calle4 != NULL && len > 0){
+      |                                ^~
+10:02:04 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+10:29:43 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:47:5: error: conflicting types for 'modificarCensista'
+   47 | int modificarCensista(Zonas* list, int len, int id);
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\Inputs.h:14,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Censistas.h:48:5: note: previous declaration of 'modificarCensista' was here
+   48 | int modificarCensista(Censistas* list, int len, int id);
+      |     ^~~~~~~~~~~~~~~~~
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:65:23: warning: passing argument 1 of 'modificarCensista' from incompatible pointer type [-Wincompatible-pointer-types]
+   65 |     modificarCensista(censitas, LEN_CENSISTAS, idModificar);
+      |                       ^~~~~~~~
+      |                       |
+      |                       Censistas * {aka struct <anonymous> *}
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\ParcialCenso.c:13:
+..\src\Zonas.h:47:30: note: expected 'Zonas *' {aka 'struct <anonymous> *'} but argument is of type 'Censistas *' {aka 'struct <anonymous> *'}
+   47 | int modificarCensista(Zonas* list, int len, int id);
+      |                       ~~~~~~~^~~~
+10:31:39 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+10:38:02 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:83:5: warning: implicit declaration of function 'darBajaZona'; did you mean 'cargarUnaZona'? [-Wimplicit-function-declaration]
+   83 |     darBajaZona(zonas, LEN_ZONAS, idModificar);
+      |     ^~~~~~~~~~~
+      |     cargarUnaZona
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+10:38:35 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+11:31:36 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'asignarZona':
+..\src\Zonas.c:306:6: warning: unused variable 'auxId' [-Wunused-variable]
+  306 |  int auxId;
+      |      ^~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+11:32:02 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+11:43:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+..\src\ParcialCenso.c: In function 'main':
+..\src\ParcialCenso.c:81:8: warning: implicit declaration of function 'buscarCensistaById'; did you mean 'buscarZonaById'? [-Wimplicit-function-declaration]
+   81 |     if(buscarCensistaById(censistas, LEN_CENSISTAS, idModificar) != -1){
+      |        ^~~~~~~~~~~~~~~~~~
+      |        buscarZonaById
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+11:45:54 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso

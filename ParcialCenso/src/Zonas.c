@@ -54,12 +54,14 @@ Zonas cargarUnaZona(int* retorno){
 
 	int flagCarga;
 	flagCarga=0;
-    int i=0;
+
 
 	 unaZona.idZona=generarIdZonas();
 
 	 unaZona.estado= PENDIENTE;
-		if(pedirNumero(&unaZona.localidad[i],"Ingrese localidad a censar 1 (LANUS) 2 (LOMAS DE ZAMORA) 3 (AVELLANEDA) 4 (BANDFIELD) \n", "Error! dato invalido",1, 4, 2)== 0){
+
+	 unaZona.idCensista=-1;
+		if(pedirNumero(&unaZona.localidad,"Ingrese localidad a censar 1 (LANUS) 2 (LOMAS DE ZAMORA) 3 (AVELLANEDA) 4 (BANDFIELD) \n", "Error! dato invalido",1, 4, 2)== 0){
 
 			flagCarga=1;
 		}
@@ -102,10 +104,10 @@ Zonas cargarUnaZona(int* retorno){
 
 void mostrarUnaZona(Zonas unaZona){
 
-  int i=0;
+
 	if (unaZona.isEmpty == 0){
 
-		printf("%-4d %-4d %-4d %-10s %-17s %-15s %10s\n", unaZona.idZona, unaZona.estado, unaZona.localidad[i], unaZona.cuadra.calleUno,
+		printf("%-4d %-4d %-4d %-4d %-10s %-17s %-15s %10s\n", unaZona.idZona, unaZona.estado, unaZona.idCensista, unaZona.localidad, unaZona.cuadra.calleUno,
 					unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
 
 	}
@@ -113,8 +115,7 @@ void mostrarUnaZona(Zonas unaZona){
 }
 
 
-
-/*int addCensitas(Censistas* list, int len, int id, char nombre[],char apellido[], int edad,int fechaDia, int fechaMes, int fechaAnio, char domicilio[], int domicilioNumero, int estado){
+int addZonas(Zonas* list, int len, int id, int idCensista, int estado, int localidad,char calle1[], char calle2[], char calle3[], char calle4[]){
 
 	int retorno;
 	int espacioLibre;
@@ -122,44 +123,206 @@ void mostrarUnaZona(Zonas unaZona){
 
 	retorno = -1;
 
-	if (list != NULL && nombre != NULL && apellido != NULL && domicilio!= NULL && len > 0){
+	if (list != NULL  && calle1 != NULL && calle2!= NULL && calle3!= NULL && calle4 != NULL  && len > 0){
 
 
-	espacioLibre= buscarEspacioLibre(list, len);
-	//printf("espacio libre %d \n", espacioLibre);
+	espacioLibre= buscarEspacioLibreZonas(list, len);
 
 		if (espacioLibre != -1) {
-
-		//	printf("espacio libre %d", espacioLibre);
 
 
 			list[espacioLibre].isEmpty = 0;
 
-			list[espacioLibre].idCensista= id;
+			list[espacioLibre].idZona= id;
 
-			strncpy(list[espacioLibre].nombre, nombre, sizeof(list[espacioLibre].nombre));
+			list[espacioLibre].idCensista= idCensista;
 
-			strncpy(list[espacioLibre].apellido, apellido, sizeof(list[espacioLibre].apellido));
+			list[espacioLibre].estado= estado;
 
-			list[espacioLibre].edad= edad;
+			list[espacioLibre].localidad=localidad;
 
-			list[espacioLibre].fecha.dia= fechaDia;
+			strncpy(list[espacioLibre].cuadra.calleUno, calle1, sizeof(list[espacioLibre].cuadra.calleUno));
 
-			list[espacioLibre].fecha.mes= fechaMes;
+			strncpy(list[espacioLibre].cuadra.calleDos, calle2, sizeof(list[espacioLibre].cuadra.calleDos));
 
-			list[espacioLibre].fecha.anio= fechaAnio;
+			strncpy(list[espacioLibre].cuadra.calleTres, calle3, sizeof(list[espacioLibre].cuadra.calleTres));
 
-			strncpy(list[espacioLibre].domicilio.calle, domicilio, sizeof(list[espacioLibre].domicilio.calle));
+			strncpy(list[espacioLibre].cuadra.calleCuatro, calle4, sizeof(list[espacioLibre].cuadra.calleCuatro));
 
-			list[espacioLibre].domicilio.numero= domicilioNumero;
 
-			list[espacioLibre].estado=estado;
-
-			mostrarUnCensista(list[espacioLibre]);
+			mostrarUnaZona(list[espacioLibre]);
 
 			retorno = 0;
 		}
 	}
-
 	return retorno;
-}*/
+}
+
+int buscarZonaById(Zonas* list, int len,int id){
+
+	int retorno;
+	retorno = -1;
+
+	if (list != NULL && len > 0 && id > 0) {
+
+		for (int i = 0; i < len; i++) {
+
+			if (list[i].idZona == id && list[i].isEmpty == 0){
+
+			  retorno = i;
+			  return retorno;
+			}
+		}
+	}
+	return retorno;
+}
+
+
+int modificarZona(Zonas* list, int len, int id){
+
+	int retorno;
+	int indice;
+	int opcion;
+	retorno = -1;
+
+	if (list != NULL && len > 0 && id > 0)
+	{
+		indice = buscarZonaById(list, len, id);
+
+    	if (indice != -1){
+
+    		mostrarUnaZona(list[indice]);
+
+    	    mostrarSubMenuZonas();
+
+    		 pedirNumero(&opcion, "Ingrese la opcion que desea modificar\n", "Error! la opcion ingresada es incorrecta \n",1, 5, 2);
+
+    		 switch(opcion){
+
+				 case 1:
+					 if(pedirNumero(&list[indice].localidad,"Ingrese la nueva localidad censar 1 (LANUS) 2 (LOMAS DE ZAMORA) 3 (AVELLANEDA) 4 (BANDFIELD) \n",
+							 "Error! localidad incorrecta: \n", 1, 4, 2)== 0){
+
+					 		printf("La nueva localidad fue cargada correctamente \n");
+					 }
+					 else{
+
+						 printf("Error! no se pudo cargar localidad invalida \n");
+					 }
+				 break;
+				 case 2:
+					if(pedirCaracteres(list[indice].cuadra.calleUno,"Ingrese la nueva primera calle: \n",50)== 0){
+
+						printf("La nueva calle fue cargado correctamente \n");
+					}
+					else{
+						printf("Error! no se pudo cargar calle ");
+					}
+				 break;
+				 case 3:
+					if(pedirCaracteres(list[indice].cuadra.calleDos,"Ingrese la nueva segunda calle: \n",50)== 0){
+
+						printf("La nueva calle fue cargado correctamente \n");
+					}
+					else{
+						printf("Error! no se pudo cargar calle ");
+					}
+				 break;
+				 case 4:
+					 if(pedirCaracteres(list[indice].cuadra.calleTres,"Ingrese la nueva tercera calle: \n",50)== 0){
+
+						printf("La nueva calle fue cargado correctamente \n");
+					}
+					else{
+						printf("Error! no se pudo cargar calle ");
+					}
+				 break;
+				 case 5:
+					 if(pedirCaracteres(list[indice].cuadra.calleCuatro,"Ingrese la nueva cuarta calle: \n",50)== 0){
+
+						printf("La nueva calle fue cargado correctamente \n");
+					}
+					else{
+						printf("Error! no se pudo cargar calle ");
+					}
+				 break;
+				 }
+    		 mostrarUnaZona(list[indice]);
+    		 retorno=0;
+    	}
+	}
+	 return retorno;
+}
+
+int darBajaZona(Zonas* list, int len, int id){
+
+	int retorno;
+	int indice;
+	retorno = -1;
+
+	if (list != NULL && len > 0 && id > 0) {
+
+		indice =  buscarZonaById(list, len, id);
+
+		if (indice != -1) {
+
+			 mostrarUnaZona(list[indice]);
+
+			if(list[indice].estado== FINALIZADO){
+
+				printf("Nose puede darde baja porque esta FINALIZADO \n");
+				 mostrarUnaZona(list[indice]);
+			}
+			else{
+			list[indice].isEmpty = 1;
+			 printf("Se dio de baja ZONA\n");
+			retorno = 0;
+			}
+		}
+	}
+	return retorno;
+}
+
+int buscarZonaCargada(Zonas list[], int len){
+	int retorno = -1;
+
+		if(list != NULL && len > 0)
+		{
+			for(int i = 0; i < len; i++)
+			{
+				if(list[i].isEmpty == 0)
+				{
+					retorno = i;
+					break;
+				}
+			}
+		}
+	return retorno;
+}
+
+int asignarZona(Zonas* list, int len, int idCencista){
+
+	int retorno = -1;
+	int indice;
+
+	if (list != NULL  && len  > 0 && idCencista >0)
+	{
+		indice = buscarZonaCargada(list, len);
+		if (indice != -1){
+
+			if(list[indice].estado == PENDIENTE && list[indice].idCensista == -1){
+
+				list[indice].idCensista=idCencista;
+				mostrarUnaZona(list[indice]);
+				retorno = 0;
+
+			}
+			else{
+			    printf("No existe se pudo cargar censista a zona");
+			}
+
+		}
+	}
+	return retorno;
+}
+
