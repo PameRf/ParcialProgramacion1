@@ -670,3 +670,75 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c"
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
 gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
 Info: Nothing to build for ParcialCenso
+14:03:59 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Zonas.h:51:42: error: unknown type name 'Censistas'
+   51 | int cargarCensados(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas);
+      |                                          ^~~~~~~~~
+..\src\Zonas.h:52:53: error: unknown type name 'Censistas'
+   52 | int buscarIndiceIdqueSeRepite(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas, int indiceCensista);
+      |                                                     ^~~~~~~~~
+14:05:25 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'cargarCensados':
+..\src\Zonas.c:341:73: warning: passing argument 5 of 'buscarIndiceIdqueSeRepite' makes integer from pointer without a cast [-Wint-conversion]
+  341 |   indice=buscarIndiceIdqueSeRepite(list,len,arrayCensistas,lenCensistas,&indiceCensista);
+      |                                                                         ^~~~~~~~~~~~~~~
+      |                                                                         |
+      |                                                                         int *
+In file included from ..\src\Zonas.c:8:
+..\src\Zonas.h:52:101: note: expected 'int' but argument is of type 'int *'
+   52 | int buscarIndiceIdqueSeRepite(Zonas* list, int len, Censistas*arrayCensistas, int lenCensistas, int indiceCensista);
+      |                                                                                                 ~~~~^~~~~~~~~~~~~~
+..\src\Zonas.c: In function 'buscarIndiceIdqueSeRepite':
+..\src\Zonas.c:387:14: error: invalid type argument of unary '*' (have 'int')
+  387 |              *indiceCensista=j;
+      |              ^~~~~~~~~~~~~~~
+14:06:21 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+In file included from ..\src\Inputs.h:15,
+                 from ..\src\Censistas.h:14,
+                 from ..\src\Censistas.c:8:
+..\src\Zonas.h:51:42: error: unknown type name 'Censistas'
+   51 | int cargarCensados(Zonas* list, int len, Censistas* arrayCensistas, int lenCensistas);
+      |                                          ^~~~~~~~~
+..\src\Zonas.h:52:53: error: unknown type name 'Censistas'
+   52 | int buscarIndiceIdqueSeRepite(Zonas* list, int len, Censistas*arrayCensistas, int lenCensistas, int* indiceCensista);
+      |                                                     ^~~~~~~~~
+14:13:40 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+14:41:20 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c:330:5: error: conflicting types for 'buscarZonaByIdCensista'
+  330 | int buscarZonaByIdCensista(Zonas* list, int len, int* id){
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\Zonas.c:8:
+..\src\Zonas.h:51:5: note: previous declaration of 'buscarZonaByIdCensista' was here
+   51 | int buscarZonaByIdCensista(Zonas* list, int len);
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+14:42:12 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso

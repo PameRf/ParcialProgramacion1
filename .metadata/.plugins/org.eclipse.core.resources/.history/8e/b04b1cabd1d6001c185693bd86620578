@@ -327,7 +327,7 @@ int asignarZona(Zonas* list, int len, int idCencista){
 	return retorno;
 }
 
-int buscarZonaByIdCensista(Zonas* list, int len, int* id){
+int buscarZonaByIdCensista(Zonas* list, int len){
 
 	int retorno;
 	retorno = -1;
@@ -336,10 +336,9 @@ int buscarZonaByIdCensista(Zonas* list, int len, int* id){
 
 		for (int i = 0; i < len; i++) {
 
-			if (list[i].idCensista != -1 && list[i].isEmpty == 0){
+			if (list[i].idZona != -1 && list[i].isEmpty == 0){
 
 			  retorno = i;
-			  *id=list[i].idCensista;
 			  return retorno;
 			}
 		}

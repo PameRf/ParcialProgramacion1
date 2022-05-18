@@ -13,8 +13,6 @@
 #include "Inputs.h"
 #include "Censistas.h"
 #include "Zonas.h"
-#include "Informes.h"
-
 #define LEN_CENSISTAS 10
 #define LEN_ZONAS 50
 
@@ -88,7 +86,7 @@ int main(void) {
 
 				break;
 			case 6:
-				cargarCensados(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
+				printf("opcion 6 \n");
 				break;
 			case 7:
 				printf("opcion 7 \n");

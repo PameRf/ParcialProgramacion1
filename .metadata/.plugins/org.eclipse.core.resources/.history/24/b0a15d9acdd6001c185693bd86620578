@@ -327,24 +327,67 @@ int asignarZona(Zonas* list, int len, int idCencista){
 	return retorno;
 }
 
-int buscarZonaByIdCensista(Zonas* list, int len, int* id){
+int cargarCensados(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas ){
 
-	int retorno;
-	retorno = -1;
+	int retorno = -1;
+	int indice;
+	int censadosInsitu;
+	int cantidadVirtual;
+	int cantidadAusentes;
+	int indiceCensista;
 
-	if (list != NULL && len > 0) {
+	if (list != NULL  && len  > 0 && arrayCensistas !=NULL && lenCensistas >0){
 
-		for (int i = 0; i < len; i++) {
+		indice=buscarIndiceIdqueSeRepite(list,len,arrayCensistas,lenCensistas,&indiceCensista);
 
-			if (list[i].idCensista != -1 && list[i].isEmpty == 0){
+		if (indice != -1){
 
-			  retorno = i;
-			  *id=list[i].idCensista;
-			  return retorno;
+			if(list[indice].estado == PENDIENTE ){
+
+				pedirNumero(&censadosInsitu, "Cargar cantidad de censados insitu", "Error dato invalido", 1, 2000, 2);
+				pedirNumero(&cantidadVirtual, "Cargar cantidad de censados que completaron censo virtual", "Error dato invalido",1, 5000, 2);
+				pedirNumero(&cantidadAusentes, "Cargar cantidad de ausentes", "Error dato invalido",1, 5000, 2);
+
+				list[indice].estado= FINALIZADO;
+				arrayCensistas[indiceCensista].estado= LIBERADO;
+				retorno = 0;
+				 mostrarUnaZona(list[indice]);
+				 mostrarUnCensista(arrayCensistas[indiceCensista]);
+
+			}
+			else{
+				printf("No existe se pudo cargar cantdad de censados");
+			}
+			if(censadosInsitu>0){
+				printf("cantidad de censados insitu %d \n",censadosInsitu);
+			}
+			if(cantidadVirtual>0){
+				printf("cantidad de censados virtual %d \n",cantidadVirtual);
+			}
+			if(cantidadAusentes> 0){
+				printf("cantidad de ausentes %d \n",cantidadAusentes);
 			}
 		}
 	}
-	return retorno;
+ return retorno;
 }
 
+int buscarIndiceIdqueSeRepite(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas, int* indiceCensista){
+    int retorno=-1;
 
+    if (list != NULL  && len  > 0 && arrayCensistas !=NULL && lenCensistas >0){
+
+    	for(int i=0;i<len;i++){
+
+        	for(int j=0;j<lenCensistas;j++){
+
+        		if(list[i].idCensista== arrayCensistas[j].idCensista){
+
+            	retorno=i;
+            	*indiceCensista=j;
+           }
+         }
+       }
+    }
+   return retorno;
+}

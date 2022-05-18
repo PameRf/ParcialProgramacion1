@@ -48,7 +48,5 @@ int modificarZona(Zonas* list, int len, int id);
 int darBajaZona(Zonas* list, int len, int id);
 int buscarZonaCargada(Zonas list[], int len);
 int asignarZona(Zonas* list, int len, int idCencista);
-int buscarZonaByIdCensista(Zonas* list, int len, int * id);
-
 
 #endif /* ZONAS_H_ */

@@ -13,8 +13,6 @@
 #include "Inputs.h"
 #include "Censistas.h"
 #include "Zonas.h"
-#include "Informes.h"
-
 #define LEN_CENSISTAS 10
 #define LEN_ZONAS 50
 
