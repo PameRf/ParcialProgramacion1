@@ -134,7 +134,7 @@ void mostrarUnaZona(Zonas unaZona){
 
 	if (unaZona.isEmpty == 0){
 
-		printf("%-4d %-10s %-4d %-10s %-10s %-17s %-15s %10s\n", unaZona.idZona, auxEstado, unaZona.idCensista, auxLocalidad, unaZona.cuadra.calleUno,
+		printf("%-4d %-15s %-4d %-18s %-15s %-17s %-15s %15s\n", unaZona.idZona, auxEstado, unaZona.idCensista, auxLocalidad, unaZona.cuadra.calleUno,
 					unaZona.cuadra.calleDos, unaZona.cuadra.calleTres, unaZona.cuadra.calleCuatro);
 
 	}
@@ -202,6 +202,25 @@ int buscarZonaById(Zonas* list, int len,int id){
 		}
 	}
 	return retorno;
+}
+
+int buscarZonaByIdLibre(Zonas* list, int len){
+
+	int retorno;
+		retorno = -1;
+
+		if (list != NULL && len > 0 ) {
+
+			for (int i = 0; i < len; i++) {
+
+				if (list[i].idCensista == -1 && list[i].isEmpty == 0){
+
+				  retorno = i;
+				  return retorno;
+				}
+			}
+		}
+ return retorno;
 }
 
 
@@ -324,6 +343,7 @@ int buscarZonaCargada(Zonas list[], int len){
 				}
 			}
 		}
+		printf("retorno en buscarzona cargada %d \n",retorno);
 	return retorno;
 }
 
@@ -333,26 +353,28 @@ int asignarZona(Zonas* list, int len, int idCencista){
 	int retorno = -1;
 	int indice;
 
-	if (list != NULL  && len  > 0 && idCencista >0)
-	{
-		indice = buscarZonaCargada(list, len);
+	if (list != NULL  && len  > 0 && idCencista >0){
+		printZonas(list, len);
+
+		indice = buscarZonaByIdLibre(list, len);
+
 		if (indice != -1){
 
-			if(list[indice].estado == PENDIENTE && list[indice].idCensista == -1){
+			if(list[indice].estado == PENDIENTE && list[indice].isEmpty == 0){
 
 				list[indice].idCensista=idCencista;
 				mostrarUnaZona(list[indice]);
 				retorno = 0;
 
 			}
-			else{
+					else{
 			    printf("No existe se pudo cargar censista a zona");
 			}
-
 		}
 	}
 	return retorno;
 }
+
 
 int buscarZonaByIdCensista(Zonas* list, int len, int* id){
 
@@ -391,3 +413,22 @@ int printZonas(Zonas* list, int len){
  return retorno;
 }
 
+int cargaForzadaDeZonas(Zonas* list){
+
+	int retorno;
+
+	Zonas zonasAux[6] = {{101, 5, 1001, 1,{"Callao", "Martinez","Montevideo","Viamonte"}},
+	           {102, 5, 1001, 2,{"Pavon", "Iberlucea","Carlos Tejedor","Maipu"}},
+				{103, 5,1003, 3,{"Yrigoyen", "San Martin","Yerbal","Guido"}},
+	            {104, 5, -1, 4,{"Magallanes", "Rosas","Colon","Hernandarias"}},
+	            {105, 5, -1, 1,{"Potosi", "Diaz Velez","Medrano","Rivadavia"}},
+	            {106, 5,1004,1,{"Maipu", "Corrientes","Lavalle","Sarmiento"}}};
+	retorno=-1;
+
+	for(int i=0; i< 6; i++){
+
+		list[i]= zonasAux[i];
+		retorno=0;
+	}
+	return retorno;
+}

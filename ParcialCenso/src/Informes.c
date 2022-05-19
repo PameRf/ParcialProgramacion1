@@ -6,6 +6,8 @@
  */
 #include "Informes.h"
 
+
+
 int cargarCensados(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas ){
 
 	int retorno = -1;
@@ -67,6 +69,7 @@ int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, in
 
 		for(int i = 0; i < len; i++){
 
+			if(list[i].isEmpty==0){
 			if(list[i].idCensista != -1){
 
 			indiceCensista=buscarCensistaById(arrayCensistas,lenCensistas, list[i].idCensista);
@@ -74,8 +77,12 @@ int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, in
 			mostrarNombreYapellidoCensista(arrayCensistas[indiceCensista]);
 			retorno=0;
 			}
+			else if(list[i].idCensista == -1){
+				mostrarUnaZona(list[i]);
+				printf("No tiene censista asignado\n");
+			}
+		  }
 		}
-
 	}
  return retorno;
 }

@@ -63,6 +63,7 @@ int buscarCensistaById(Censistas* list, int len,int id){
 			}
 		}
 	}
+	printf("retorno en func buscar censista by id %d", retorno);
 	return retorno;
 }
 
@@ -292,7 +293,7 @@ int modificarCensista(Censistas* list, int len, int id){
 					if(pedirCaracteres(list[indice].domicilio.calle, "Ingrese su nuevo domicilio: \n", 50)== 0){
 						if(pedirNumero(&list[indice].domicilio.numero, "Ingrese su numero de domicilio", "Error! dato invalido \n",1,9999,2)==0){
 
-						printf("El nuevo codigo de vuelo fue cargado correctamente\n");
+						printf("El nuevo domicilio fue cargado correctamente\n");
 						}
 					}
 					else{

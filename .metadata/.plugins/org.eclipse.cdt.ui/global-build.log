@@ -1012,3 +1012,117 @@ Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
 gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
 Info: Nothing to build for ParcialCenso
+18:25:17 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:28:35 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+18:29:50 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:30:19 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:30:47 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:42:13 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:43:43 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+18:45:44 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+20:45:41 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+Info: Nothing to build for ParcialCenso
+20:58:30 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+21:13:53 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+21:37:30 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+..\src\Zonas.c: In function 'asignarZona':
+..\src\Zonas.c:335:6: warning: unused variable 'indice' [-Wunused-variable]
+  335 |  int indice;
+      |      ^~~~~~
+..\src\Zonas.c:334:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  334 |  int retorno = -1;
+      |      ^~~~~~~
+..\src\Zonas.c: At top level:
+..\src\Zonas.c:370:2: error: expected identifier or '(' before 'return'
+  370 |  return retorno;
+      |  ^~~~~~
+..\src\Zonas.c:371:1: error: expected identifier or '(' before '}' token
+  371 | }
+      | ^
+..\src\Zonas.c: In function 'asignarZona':
+..\src\Zonas.c:369:2: warning: control reaches end of non-void function [-Wreturn-type]
+  369 |  }
+      |  ^
+21:39:29 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+15:14:19 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+16:47:01 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Inputs.o" "..\\src\\Inputs.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso

@@ -76,9 +76,11 @@ int sonLetras(char cadena[]);
 /// @param len tamanio
 /// @return-1 sino pudo retornarlo o 0 si pudo hacerlo
 int pedirCaracteres(char cadena[],char mensaje[], int len);
-///
-
+/// @brief
+/// primer submenu funcion modificar censistas solo muestra opciones
 void mostrarSubMenu();
+/// @brief
+/// segundo submenu funcion midificar zonas solo muestra opciones
 void mostrarSubMenuZonas();
 
 
