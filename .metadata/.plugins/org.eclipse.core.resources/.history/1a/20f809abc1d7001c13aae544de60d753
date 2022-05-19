@@ -102,9 +102,9 @@ int informarCantidadCensita(Zonas* list, int len, Censistas *arrayCensistas, int
         	 contadorCensista++;
         	 }
          }
+         printf("La cantidad de zonas en estado pendiente con censitas activos son %d",contadorCensista);
 
       }
-        printf("La cantidad de zonas en estado pendiente con censitas activos son %d \n",contadorCensista);
     }
 
     return retorno;
@@ -117,7 +117,7 @@ int buscarActivoXid(Censistas *arrayCensistas, int lenCensistas,int id){
 
 
 	if( arrayCensistas != NULL && lenCensistas > 0){
-		indice=buscarCensistaById(arrayCensistas, lenCensistas, id);
+	 buscarCensistaById(arrayCensistas, lenCensistas, id);
 
 	 if (indice != -1) {
 
@@ -128,94 +128,3 @@ int buscarActivoXid(Censistas *arrayCensistas, int lenCensistas,int id){
      }
  return retorno;
 }
-
-int MostrarCensistasXZonas(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas){
-
-	int retorno=-1;
-
-
-
-    if(list != NULL && len > 0  && arrayCensistas != NULL && lenCensistas > 0){
-        for(int i=0; i<len; i++){
-
-         switch(list[i].localidad){
-
-         case LANUS:
-        	  ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	  printCensistas(arrayCensistas,lenCensistas);
-        	 break;
-          case LOMAS_DE_ZAMORA:
-        	  ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	  printCensistas(arrayCensistas,lenCensistas);
-              break;
-         case AVELLANEDA:
-        	 ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	 printCensistas(arrayCensistas,lenCensistas);
-             break;
-         case BANDFIELD:
-        	 ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	 printCensistas(arrayCensistas,lenCensistas);
-          break;
-
-         }
-        }
-       }
-    return retorno;
- }
-
-
-int ordenarAlfabeticamente(Censistas *arrayCensistas, int lenCensistas){
-
-	int retorno= -1;
-	int ordenado;
-	Censistas aux;
-		do {
-				ordenado = 1;
-				lenCensistas--;
-				for (int i = 0; i < lenCensistas; i++) {
-
-					if (stricmp(arrayCensistas[i].nombre, arrayCensistas[i + 1].nombre)  < 0){
-						aux = arrayCensistas[i];
-						arrayCensistas[i] = arrayCensistas[i + 1];
-						arrayCensistas[i + 1] = aux;
-						ordenado = 0;
-					}
-					else if(arrayCensistas[i].nombre == arrayCensistas[i].nombre){
-
-						 ordenarAlfabeticamenteApellido(arrayCensistas,  lenCensistas);
-						ordenado = 0;
-					}
-
-				}
-			} while (ordenado == 0);
-			retorno = 0;
-	return retorno;
-
-}
-
-int ordenarAlfabeticamenteApellido(Censistas *arrayCensistas, int lenCensistas){
-
-	int retorno= -1;
-	int ordenado;
-	Censistas aux;
-		do {
-				ordenado = 1;
-				lenCensistas--;
-				for (int i = 0; i < lenCensistas; i++) {
-					if (stricmp(arrayCensistas[i].apellido, arrayCensistas[i + 1].apellido)  < 0){
-						aux = arrayCensistas[i];
-						arrayCensistas[i] = arrayCensistas[i + 1];
-						arrayCensistas[i + 1] = aux;
-						ordenado = 0;
-					}
-
-
-				}
-			} while (ordenado == 0);
-			retorno = 0;
-return retorno;
-
-}
-
-
-

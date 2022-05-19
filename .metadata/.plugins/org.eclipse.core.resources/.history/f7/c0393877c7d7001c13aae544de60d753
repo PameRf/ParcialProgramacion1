@@ -26,8 +26,5 @@ int cargarCensados(Zonas* list, int len, Censistas* arrayCensistas, int lenCensi
 int MostrarZonasConCensistas(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas);
 int buscarActivoXid(Censistas *arrayCensistas, int lenCensistas,int id);
 int informarCantidadCensita(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas);
-int ordenarAlfabeticamente(Censistas *arrayCensistas, int lenCensistas);
-int ordenarAlfabeticamenteApellido(Censistas *arrayCensistas, int lenCensistas);
-int MostrarCensistasXZonas(Zonas* list, int len, Censistas *arrayCensistas, int lenCensistas);
 
 #endif /* INFORMES_H_ */

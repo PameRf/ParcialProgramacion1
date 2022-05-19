@@ -1126,3 +1126,90 @@ gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censista
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
 gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
 Info: Nothing to build for ParcialCenso
+19:17:10 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'informarCantidadCensita':
+..\src\Informes.c:98:22: warning: comparison between pointer and integer
+   98 |         for(int i=0;i<list;i++)
+      |                      ^
+..\src\Informes.c: In function 'buscarActivoXid':
+..\src\Informes.c:123:6: warning: 'indice' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  123 |   if (indice != -1) {
+      |      ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Censistas.o" "..\\src\\Censistas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+19:19:25 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+19:21:55 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+20:00:26 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'ordenarAlfabeticamente':
+..\src\Informes.c:173:11: error: assignment to expression with array type
+  173 |       aux = arrayCensistas[i];
+      |           ^
+..\src\Informes.c:175:31: error: incompatible types when assigning to type 'Censistas' {aka 'struct <anonymous>'} from type 'char *'
+  175 |       arrayCensistas[i + 1] = aux;
+      |                               ^~~
+..\src\Informes.c: In function 'ordenarAlfabeticamenteApellido':
+..\src\Informes.c:201:11: error: assignment to expression with array type
+  201 |       aux = arrayCensistas[i];
+      |           ^
+..\src\Informes.c:203:31: error: incompatible types when assigning to type 'Censistas' {aka 'struct <anonymous>'} from type 'char *'
+  203 |       arrayCensistas[i + 1] = aux;
+      |                               ^~~
+20:02:50 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Zonas.o" "..\\src\\Zonas.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\ParcialCenso.o" "..\\src\\ParcialCenso.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+20:07:23 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file ParcialCenso.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:07:35 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+20:10:56 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c: In function 'MostrarCensistasXZonas':
+..\src\Informes.c:204:1: error: expected declaration or statement at end of input
+  204 | }
+      | ^
+..\src\Informes.c:204:1: warning: control reaches end of non-void function [-Wreturn-type]
+  204 | }
+      | ^
+At top level:
+..\src\Informes.c:182:5: warning: 'ordenarAlfabeticamenteApellido' defined but not used [-Wunused-function]
+  182 | int ordenarAlfabeticamenteApellido(Censistas *arrayCensistas, int lenCensistas){
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\Informes.c:154:5: warning: 'ordenarAlfabeticamente' defined but not used [-Wunused-function]
+  154 | int ordenarAlfabeticamente(Censistas *arrayCensistas, int lenCensistas){
+      |     ^~~~~~~~~~~~~~~~~~~~~~
+20:13:46 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso
+20:23:09 **** Incremental Build of configuration Debug for project ParcialCenso ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o ParcialCenso.exe "src\\Censistas.o" "src\\Informes.o" "src\\Inputs.o" "src\\ParcialCenso.o" "src\\Zonas.o" 
+Info: Nothing to build for ParcialCenso

@@ -142,19 +142,15 @@ int MostrarCensistasXZonas(Zonas* list, int len, Censistas *arrayCensistas, int 
 
          case LANUS:
         	  ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	  printCensistas(arrayCensistas,lenCensistas);
         	 break;
           case LOMAS_DE_ZAMORA:
         	  ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	  printCensistas(arrayCensistas,lenCensistas);
               break;
          case AVELLANEDA:
         	 ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	 printCensistas(arrayCensistas,lenCensistas);
              break;
          case BANDFIELD:
         	 ordenarAlfabeticamente(arrayCensistas,lenCensistas);
-        	 printCensistas(arrayCensistas,lenCensistas);
           break;
 
          }
@@ -168,12 +164,11 @@ int ordenarAlfabeticamente(Censistas *arrayCensistas, int lenCensistas){
 
 	int retorno= -1;
 	int ordenado;
-	Censistas aux;
+	char aux[40];
 		do {
 				ordenado = 1;
 				lenCensistas--;
 				for (int i = 0; i < lenCensistas; i++) {
-
 					if (stricmp(arrayCensistas[i].nombre, arrayCensistas[i + 1].nombre)  < 0){
 						aux = arrayCensistas[i];
 						arrayCensistas[i] = arrayCensistas[i + 1];
@@ -197,7 +192,7 @@ int ordenarAlfabeticamenteApellido(Censistas *arrayCensistas, int lenCensistas){
 
 	int retorno= -1;
 	int ordenado;
-	Censistas aux;
+	char aux[40];
 		do {
 				ordenado = 1;
 				lenCensistas--;
@@ -216,6 +211,5 @@ int ordenarAlfabeticamenteApellido(Censistas *arrayCensistas, int lenCensistas){
 return retorno;
 
 }
-
 
 

@@ -147,7 +147,7 @@ int main(void) {
 				informarCantidadCensita(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
 				break;
 			case 12:
-				MostrarCensistasXZonas(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
+
 				break;
 			case 13:
 				printf("Gracias \n");

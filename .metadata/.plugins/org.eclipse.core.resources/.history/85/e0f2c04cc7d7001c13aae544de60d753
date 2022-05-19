@@ -54,8 +54,8 @@ int main(void) {
 	printf("9. Carga forzada Censistas\n");
 	printf("10. Carga forzada Zonas\n");
 	printf("11. Informar censistas activos con zonas pendientes\n");
-	printf("12. Informar censistas alfabeticamente\n");
-	printf("13. Salir\n");
+	printf("11. Salir\n");
+	printf("11. Salir\n");
 
 	validarMenu= pedirNumero(&opcionMenu, "Ingrese una opcion \n", "Error! Ingrese una opcion valida: \n",1, 13, 2);
 
@@ -147,7 +147,7 @@ int main(void) {
 				informarCantidadCensita(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
 				break;
 			case 12:
-				MostrarCensistasXZonas(zonas, LEN_ZONAS, censistas, LEN_CENSISTAS);
+
 				break;
 			case 13:
 				printf("Gracias \n");
